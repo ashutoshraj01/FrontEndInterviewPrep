@@ -24,3 +24,19 @@ Array.prototype.myMap = function(cb){
     return newArr;
 }
  ```
+
+ # Reduce - Array Method
+
+```javascript
+ Array.prototype.myReduce = function(cb, intial){
+    let acc = intial;
+    for(let i=0;i<this.length;i++){
+        if(acc !== undefined){
+            acc = cb.call(undefined, acc, this[i], i, this);
+        }else{
+            acc = this[i];
+        }
+    }
+    return acc;
+}
+ ```
