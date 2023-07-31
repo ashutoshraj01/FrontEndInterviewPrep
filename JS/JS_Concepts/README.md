@@ -1,4 +1,4 @@
-# This behaves different inside arrow function and function declaration / Anonymous Function
+# "This" behaves different inside arrow function and function declaration / Anonymous Function
 
 ```javascript
 let obj ={
