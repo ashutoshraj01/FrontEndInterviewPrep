@@ -31,7 +31,7 @@ let obj ={
 
 # Shadowing
 
-## Legal Shadowing
+#### Legal Shadowing
 
 ```javascript
  let a = 10;  
@@ -43,7 +43,7 @@ let obj ={
  console.log(a); // 10
  ``` 
 
-## Illegal Shadowing
+#### Illegal Shadowing
 
 ```javascript
  let a = 10;  
