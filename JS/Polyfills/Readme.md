@@ -52,3 +52,21 @@ Array.prototype.myMap = function(cb){
     }
 }
  ```
+
+ # Call - Function Method
+
+```javascript
+ Function.prototype.customCall = function(obj, ...args) {
+    obj.fnRef = this;
+    obj.fnRef(...args);
+}
+ ```
+
+  # Apply - Function Method  
+
+```javascript
+ Function.prototype.customApply = function(obj, ...args) {   // Same as Call, it takes array as second arguments.
+    obj.fnRef = this;
+    obj.fnRef(...args);
+}
+ ```
