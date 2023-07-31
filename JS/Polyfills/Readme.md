@@ -40,3 +40,15 @@ Array.prototype.myMap = function(cb){
     return acc;
 }
  ```
+
+ # Bind - Function Method
+
+```javascript
+ Function.prototype.myBind = function(...args){
+    let obj =this;
+    let params = args.slice(1);
+    return function () {
+       obj.apply(args[0], params); 
+    }
+}
+ ```
