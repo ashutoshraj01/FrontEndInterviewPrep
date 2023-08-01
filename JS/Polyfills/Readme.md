@@ -87,3 +87,34 @@ function flat(arr, flattenedArr=[]){
     return flattenedArr;
 }
  ```
+
+  # Flatten a nested Object
+
+ ```javascript
+let object = {
+    name1: "Name1",
+    obj2: {
+        name2: "Name2",
+        obj3: {
+            name3: "Name3"
+        }
+    }
+}
+
+function flattenObject(obj, flattenedObj={}){
+  for(let key in obj){
+      if(typeof(obj[key])==="object"){
+          flattenObject(obj[key], flattenedObj);
+      }else{
+          flattenedObj[key] = obj[key];
+      }
+  }
+    return flattenedObj;
+}
+
+Output ==> {
+    "name1": "Name1",
+    "name2": "Name2",
+    "name3": "Name3"
+}
+ ```
