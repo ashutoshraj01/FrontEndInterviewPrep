@@ -70,3 +70,20 @@ Array.prototype.myMap = function(cb){
     obj.fnRef(...args);
 }
  ```
+
+ # Flatten a nested array
+
+ ```javascript
+let array = [1,2,3, [4,5], 6, 7,[8, [9,10]]];
+
+let flattenedArr=[];
+function flat(arr){
+    arr.forEach((item)=>{
+        if(Array.isArray(item)){
+            flat(item);
+        }else{
+            flattenedArr.push(item)
+        }
+    })
+}
+ ```
