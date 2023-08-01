@@ -80,6 +80,8 @@ let obj ={
  #### Shallow Copy of Object
 
 ```javascript
+ // Object here are created using reference, due to which if value inside nested object changes in one object, it gets reflected inside the other one.
+
 let obj = {
   name: "David",
   age: 22
@@ -91,7 +93,7 @@ let obj = {
  ```
 
  #### Shallow Copy of Array
-
+ 
 ```javascript
 let arr = [1,2,3,4,5];
 
