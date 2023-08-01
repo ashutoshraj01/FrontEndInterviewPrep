@@ -76,14 +76,14 @@ Array.prototype.myMap = function(cb){
  ```javascript
 let array = [1,2,3, [4,5], 6, 7,[8, [9,10]]];
 
-let flattenedArr=[];
-function flat(arr){
+function flat(arr, flattenedArr=[]){
     arr.forEach((item)=>{
         if(Array.isArray(item)){
-            flat(item);
+            flat(item, flattenedArr);
         }else{
             flattenedArr.push(item)
         }
     })
+    return flattenedArr;
 }
  ```
