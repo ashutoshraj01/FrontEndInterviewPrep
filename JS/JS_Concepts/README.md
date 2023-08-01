@@ -74,3 +74,33 @@ let obj ={
   {}  // Empty Object
   Any varaible/String(Non-empty)
  ```
+
+# Shallow / Deep Copy
+
+ #### Shallow Copy of Object
+
+```javascript
+let obj = {
+  name: "David",
+  age: 22
+}
+
+1. let obj1 = obj;
+2. let obj2 = {...obj};
+3. let obj3 = Object.assgin({}, obj);
+ ```
+
+ #### Shallow Copy of Array
+
+```javascript
+let arr = [1,2,3,4,5];
+
+1. let arr1 = arr;
+2. let arr2 = [...arr];
+3. let arr3 = Array.from(arr);
+ ```
+
+  #### Deep Copy of Object/Array
+  ```javascript
+    let deepCopy = JSON.parse(JSON.stringify(objectName or arrayName));
+ ```
