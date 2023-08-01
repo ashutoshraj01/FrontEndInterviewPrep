@@ -106,3 +106,38 @@ let arr = [1,2,3,4,5];
   ```javascript
     let deepCopy = JSON.parse(JSON.stringify(objectName or arrayName));
  ```
+
+ # Object creation using 
+
+ #### Class
+  ```javascript
+    class Person{
+      constructor(name, age){
+        this.name = name;
+        this.age = age;
+      }
+    }
+
+    let person1 = new Person("Klauss", 1000);
+
+    person1 ==> {
+      "name": "Klauss",
+      "age": 1000
+    }
+ ```
+
+ #### Constructor function
+
+  ```javascript
+    function Car(name, colour){
+      this.name = name;
+      this.colour = colour;
+    }
+
+    let bmw = new Car("BMX", "Black");
+
+    bmw ==> {
+      "name": "BMX",
+      "colour": "Black" 
+    }
+ ```
