@@ -53,3 +53,24 @@ let obj ={
     console.log(a); // Throws error(Identifier 'a' has already been declared), since var is a functional scope.
  }
  ``` 
+
+ # Values returning 
+ 
+ #### As a false value
+
+```javascript
+ false
+ "" //empty string
+ 0 // zero
+ null
+ undefined
+ NaN
+ ```
+
+ #### As a true value
+
+```javascript
+  []  // Empty Array
+  {}  // Empty Object
+  Any varaible/String(Non-empty)
+ ```
