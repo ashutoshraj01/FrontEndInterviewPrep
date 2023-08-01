@@ -118,3 +118,35 @@ Output ==> {
     "name3": "Name3"
 }
  ```
+
+ # Flatten a nested Object taking care of nested keys
+
+ ```javascript
+let object = {
+    name1: "Name1",
+    obj2: {
+        name2: "Name2",
+        obj3: {
+            name3: "Name3"
+        }
+    }
+}
+
+function flattenObject(obj, flattenedObj={}, objKey){
+  for(let key in obj){
+      let KEY = objKey ? `${objKey}.${key}` : key
+      if(typeof(obj[key])==="object"){
+          flattenObject(obj[key], flattenedObj, KEY);
+      }else{
+          flattenedObj[KEY] = obj[key];
+      }
+  }
+    return flattenedObj;
+}
+
+Output ==> {
+    "name1": "Name1",
+    "obj2.name2": "Name2",
+    "obj2.obj3.name3": "Name3"
+}
+ ```
